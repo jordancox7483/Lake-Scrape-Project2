@@ -13,7 +13,7 @@ credentials = ServiceAccountCredentials.from_json_keyfile_name('C:\\Users\\jcox\
 client = gspread.authorize(credentials)
 
 # Name of the Google Sheet where you want to write the data
-sheet_name = 'LakeTracking'
+sheet_name = "LakeTracking"
 
 # Open the specified Google Sheet
 sheet = client.open(sheet_name)
@@ -66,7 +66,27 @@ df = pd.DataFrame(data, columns=['lake_name', 'lake_level', 'timestamp'])
 # Convert DataFrame to list of lists (values in each row)
 values = df.values.tolist()
 
-# Update the worksheet with the new data
-worksheet.update('A1', values)
 
-print(f'Data successfully written to {sheet_name}!')
+
+
+# Initialize a list for new data
+new_data = []
+
+# Iterate through rows to find and extract the specific field (similar to your current approach)
+for row in grid_rows[1:]:  # Skip the header row
+    lake_name = get_cell_text(row, 0)
+    lake_altitude = get_cell_text(row, 1)
+    lake_level = get_cell_text(row, 2)
+    new_data.append([lake_name, lake_level, timestamp])
+
+# Get existing data from the worksheet
+existing_data = worksheet.get_all_values()
+
+# Combine existing data with new data
+combined_data = existing_data + new_data
+
+# Append the combined data to the worksheet
+worksheet.clear()  # Clear existing data (optional, if you want to overwrite everything)
+worksheet.append_rows(combined_data)
+
+print(f'Data successfully appended to {sheet_name}!')
