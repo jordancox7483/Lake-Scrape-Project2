@@ -90,7 +90,7 @@ worksheet.clear()  # Clear existing data (optional, if you want to overwrite eve
 worksheet.append_rows(combined_data)
 
 print(f'Data successfully appended to {sheet_name}!')
-=======
+
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 import pandas as pd
@@ -183,4 +183,4 @@ worksheet.clear()  # Clear existing data (optional, if you want to overwrite eve
 worksheet.append_rows(combined_data)
 
 print(f'Data successfully appended to {sheet_name}!')
->>>>>>> bdec8bac6e1313801c4e7398600dbf7f4d64841e
+
