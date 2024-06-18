@@ -1,3 +1,6 @@
+A small project to learn some Python and scrape lake levels from a website for long term monitoring.  
+
+
 Install Prereqs: 
 
 * Using VS Code: go to View -> Terminal from the top menu.
