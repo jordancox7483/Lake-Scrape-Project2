@@ -1,6 +1,6 @@
 @echo off
 REM Define the log file path
-set LOGFILE="C:\Users\jcox\Documents\Lake Scrape Project\batlog.txt"
+set LOGFILE="C:\Users\jcox\Documents\batlog.txt"
 
 REM Activate the virtual environment and redirect output to log file
 CALL "C:\Users\jcox\Documents\Lake Scrape Project\.venv\Scripts\activate.bat" >> %LOGFILE% 2>&1
