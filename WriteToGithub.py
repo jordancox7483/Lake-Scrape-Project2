@@ -1,3 +1,5 @@
+import os
+import subprocess
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 from bs4 import BeautifulSoup
@@ -13,15 +15,6 @@ credentials = ServiceAccountCredentials.from_json_keyfile_name('C:\\Users\\jcox\
 
 # Authorize the client
 client = gspread.authorize(credentials)
-
-# Name of the Google Sheet where you want to write the data
-sheet_name = "LakeTracking"
-
-# Open the specified Google Sheet
-sheet = client.open(sheet_name)
-
-# Select the first worksheet
-worksheet = sheet.get_worksheet(0)  # Assuming you want to write to the first sheet
 
 # URL of the webpage containing the tables
 url = 'https://ww4.cubecarolinas.com/lake/levels?orgID=3'
@@ -65,30 +58,27 @@ for row in grid_rows[1:]:  # Skip the header row
 # Create a DataFrame from the data
 df = pd.DataFrame(data, columns=['lake_name', 'lake_level', 'timestamp'])
 
-# Convert DataFrame to list of lists (values in each row)
-values = df.values.tolist()
+# Path to your local git repository and CSV file
+repo_path = 'C:\\Users\\jcox\\Documents\\Lake Scrape Project'
+csv_path = os.path.join(repo_path, 'LakeTracking.csv')
 
+# Load the existing CSV file if it exists, otherwise create a new one
+if os.path.exists(csv_path):
+    existing_df = pd.read_csv(csv_path)
+    combined_df = pd.concat([existing_df, df], ignore_index=True)
+else:
+    combined_df = df
 
+# Save the updated DataFrame back to the CSV file
+combined_df.to_csv(csv_path, index=False)
 
+# Change directory to the repository
+os.chdir(repo_path)
 
-# Initialize a list for new data
-new_data = []
+# Commit and push the changes to the repository
+subprocess.run(['git', 'add', 'LakeTracking.csv'])
+commit_message = f'Update LakeTracking on {timestamp}'
+subprocess.run(['git', 'commit', '-m', commit_message])
+subprocess.run(['git', 'push', 'origin', 'main'])  # Ensure 'main' is your branch name
 
-# Iterate through rows to find and extract the specific field (similar to your current approach)
-for row in grid_rows[1:]:  # Skip the header row
-    lake_name = get_cell_text(row, 0)
-    lake_altitude = get_cell_text(row, 1)
-    lake_level = get_cell_text(row, 2)
-    new_data.append([lake_name, lake_level, timestamp])
-
-# Get existing data from the worksheet
-existing_data = worksheet.get_all_values()
-
-# Combine existing data with new data
-combined_data = existing_data + new_data
-
-# Append the combined data to the worksheet
-worksheet.clear()  # Clear existing data (optional, if you want to overwrite everything)
-worksheet.append_rows(combined_data)
-
-print(f'Data successfully appended to {sheet_name}!')
+print('Data successfully appended to LakeTracking.csv and pushed to GitHub!')
