@@ -1,0 +1,6 @@
+Data successfully appended to LakeTracking!
+[main e473d96] Update LakeTracking on Data for hour:6/22/2024 9:00 AM
+ 1 file changed, 4 insertions(+)
+To https://github.com/jordancox7483/Lake-Scrape-Project2.git
+   d138fc7..e473d96  main -> main
+Data successfully appended to LakeTracking.csv and pushed to GitHub!
