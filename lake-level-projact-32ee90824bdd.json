@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "lake-level-projact",
+  "private_key_id": "32ee90824bdd30569ffd297b675402c15f25aa5a",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDqsk74DVNaxIhE\n+TqUjhLR3pLcL+EUXkT+WGyofM+rMQK5rBos0lgGnuywAsUREPUruta33WFwn6hp\nU4M5XzH76HetGjJS4NnLHv6vqWKy0f9q8Ur5BMJqFArcLpXwQDdcAAqfmEdVI5tC\nVcSxvnO/zWY1dN+BFZ+O4QPvFgwkL7gjB5X9GEZxWdtojlMWaYjd6Z3ShPNbo8+q\nce7K2KIqicT/ljMj85M/jKESHOwcNK6rQVPdNuucj0jxtzk7VNlygjqCnKdztchp\nAgujBQx5tyrEBWdo3LAWKKR9z4OINrXJbJ2yMQPWtxQiMz4OG0Lf1da9GaVCRwNk\nbsz9H1XrAgMBAAECggEAYAnrKrI5Q9Fcee0KvbONm/faXOPy1OTmkrYYcLHyQPlj\nRhtY8rJ4du0dqcDYZ21rBiQErWSX9QBAaClWb2m3CIBOSLWJlkSQmv/p9HP6AXbR\ncC+hIFmEPOhKsWMW1CNTBAC4WCp2Ni7F39U9Egb/UqN4ibNzqlzw2ATYGUQKX9um\ncNvynjTwdZTdxH7SW/PAt6PqilBN3V/xai0WFqNMFutxdgE7RY2QO1ics73SCNQd\nKHqOXKbjFEGkf0gHMaaaaI7JbR9ym/UvBApcHgpfLikatxpTqI6pZnkTv1Mf0BWa\nL5Cwtq71cgEnuv4LJZ4xZRyNOQ4cz4rrI1GFMs4y0QKBgQD7M28zjdXoi49g8JIW\nY8X7szkFISu5rSDspCRd/Z55C2jeitVO8qHzdte9d6aP20jUB8Jjm5IE8434oe2x\n/KXR340tyasxM6gO8/itLeK2A/RnbT6Gvi0bRINC4HBB2FPTYY6JDCCSrcvTc08P\nQpGDhlgoD4oTAOdFQvY0+uz7PQKBgQDvLienPUz0z+sX2OhzMnTYy2qaz0uXmLrC\ns4kvtELcBwUs7bsOZZV1d91OPvhbin/GvU982tyh0ueIZOXHh475YLwZdRoq+jzG\nrQ62j8zt2gvp9ZwHVobb9nM+mMgioeqwt9WGYjcyZXjR37EXmhjUahAhmCpZQEAL\nRyHzb3bIRwKBgQCgDZST15JsucdgL8gVBftWtUnmb80pYBszTB5z2K3JWDC4YuMo\ni0YPFzC84ui4jjKoDk2YI7508y4JNjt6BY0t3O9aNj2ietRguqg+x5bE/F4ULDID\nrlaVIiE0UkaUXZ6Dd4xW2+hBLQVKtBSyl2qZz9aJp+UE2LWClvjCpwKpzQKBgECj\nGYZBs71pPyBXtyICnb9E4c9qfARA+x/JAycIMRVjNEvbBzUx0L1JIl6V9+pNOJDN\n8mBMiVmWNIoQsmRExyevs8WxdtvsemY6uIIvxHL2/UdB3+O/x3xEUwq0oUlytokB\ndUv22PHeqFMXf7VgKJum+isKA0/RZD1oAM3X7qLbAoGBAJDfCdPRRldxG8558J27\npkbkbZY7Ei/cyUjiDBNlrVTVIPLs/wYG9H3ErdLbZK4K0pV1cBu2A1dN3nsc7D70\n6TU31TcBgz9NxD9Kp0B9E8IP0IigIvRKgkCOOkMnH2ixAkpqMP1lEUUoeX6Da2st\ninGjLOfxtMV8gYnSka2NApZ0\n-----END PRIVATE KEY-----\n",
+  "client_email": "lake-levels-write@lake-level-projact.iam.gserviceaccount.com",
+  "client_id": "105357993549451965706",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/lake-levels-write%40lake-level-projact.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
